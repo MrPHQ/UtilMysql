@@ -7,4 +7,10 @@
 #define UTIL_MYSQL_API extern "C" __declspec(dllimport)	
 #endif
 
+#ifdef UTIL_MYSQL_EXPORTS
+#define UTIL_MYSQL_CPPAPI __declspec(dllexport)
+#else
+#define UTIL_MYSQL_CPPAPI __declspec(dllimport)	
+#endif
+
 #endif
